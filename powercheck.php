@@ -9,8 +9,6 @@ require("credentials.php");
 set_error_handler("exception_error_handler");
 ini_set('display_errors','true');
 
-$ignoredTypes = array("5","8","9","17"); // device Types that do not need Power Ports
-
 $curl = curl_init();
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 $headers = array("Authorization: Token ".$token, "Accept: application/json; indent=4", "Content-Type: application/json");
